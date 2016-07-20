@@ -14,10 +14,16 @@ class Dotnetcli < Formula
     system "git checkout -f rel/1.0.0-preview2"
     system "./build.sh", "--targets", "Prepare,Compile"
     system "cp -a ./artifacts/*/stage2/. #{bin}"
-    bin.install
   end
 
   test do
     system "#{bin}/dotnet", "--version"
+  end
+
+  bottle do
+    cellar :any
+    root_url "https://github.com/brthor/homebrew-dotnet-cli/raw/master"
+    sha256 "41da60a0fbab6b5ad981f72731957acc1b025b210d339af69e6daa74fd54bfe9" => :yosemite
+    sha256 "41da60a0fbab6b5ad981f72731957acc1b025b210d339af69e6daa74fd54bfe9" => :el_capitan
   end
 end
