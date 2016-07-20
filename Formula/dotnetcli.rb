@@ -22,7 +22,7 @@ class Dotnetcli < Formula
 
   bottle do
     cellar :any
-    root_url "https://github.com/brthor/homebrew-dotnet-cli/raw/master"
+    root_url "https://github.com/brthor/homebrew-dotnet-cli/releases/download/1.0.0-preview2-003121"
     sha256 "41da60a0fbab6b5ad981f72731957acc1b025b210d339af69e6daa74fd54bfe9" => :yosemite
     sha256 "41da60a0fbab6b5ad981f72731957acc1b025b210d339af69e6daa74fd54bfe9" => :el_capitan
   end
