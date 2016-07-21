@@ -13,7 +13,10 @@ class Dotnetcli < Formula
     system "git remote add -t rel/1.0.0-preview2 -f origin https://github.com/dotnet/cli.git"
     system "git checkout -f rel/1.0.0-preview2"
     system "./build.sh", "--targets", "Prepare,Compile"
-    system "cp -a ./artifacts/*/stage2/. #{bin}"
+    system "cp -n ./artifacts/*/stage2/dotnet /usr/local/share/dotnet/dotnet"
+    system "cp -R -n ./artifacts/*/stage2/shared/. /usr/local/share/dotnet/shared"
+    system "cp -R -n ./artifacts/*/stage2/sdk/. /usr/local/share/dotnet/shared"
+    system "ln -s /usr/local/share/dotnet #{bin}/dotnet"
   end
 
   test do
