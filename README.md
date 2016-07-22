@@ -1,5 +1,8 @@
 # homebrew-dotnet-cli
-dotnet cli tap/formulas for OSX homebrew package manager
+experimental dotnet cli tap/formulas for OSX homebrew package manager
+
+# Still Needed 
+- Proper side by side support
 
 # Getting Started
 
